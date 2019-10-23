@@ -1,6 +1,10 @@
 const express = require('express');
+const logger = require('morgan');
+
 const app = express();
-var routes = require('./routes.js');
+app.use(logger('dev'));
+
+const routes = require('./routes.js');
 
 const hostname = "127.0.0.1";
 const port = 8000;
