@@ -1,19 +1,13 @@
-const http = require("http");
+const express = require('express');
+const app = express();
+var routes = require('./routes.js');
 
 const hostname = "127.0.0.1";
 const port = 8000;
 
-// Create HTTP server 
-const server = http.createServer((req, res) => {
-
-    // Set the response HTTP header with HTTP status and Content type
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-
-    // Send the response body "Hello World"
-    res.end('Hello World\n');
-});
+app.use('/', routes);
 
 // Prints a log once the server starts listening
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-})
+app.listen(port, function() {
+    console.log(`Example app started on http://${hostname}:${port}!`);
+});

@@ -4,14 +4,23 @@ A Web application with ability to stream tweets for a given hashtag or a specifi
 
 Enduser should be able to view tweet in realtime.
 
+## Prerequisites
+
+* Node.js
+
 ## Run instruction
 
 ```sh
+# get the code
+git clone https://github.com/souvikmaji/twit-stream.git
+cd twit-stream
+
 # install dependencies
+
 npm i
 
 # run
-npm run app
+npm start
 ```
 
 Visit: <http://127.0.0.1:8000>
@@ -25,7 +34,6 @@ Visit: <http://127.0.0.1:8000>
 
 * ExpressJS
 
-
 ## TODO
 
 * your version control history, with hopefully more than 1 commit
@@ -37,3 +45,4 @@ Visit: <http://127.0.0.1:8000>
 * good use of comments
 * lint warnings
 * unit & integration tests
+* Check with <https://www.npmjs.com/package/dependency-check> before delivery.
