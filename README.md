@@ -4,6 +4,18 @@ A Web application with ability to stream tweets for a given hashtag or a specifi
 
 Enduser should be able to view tweet in realtime.
 
+## Run instruction
+
+```sh
+# install dependencies
+npm i
+
+# run
+npm run app
+```
+
+Visit: <http://127.0.0.1:8000>
+
 ## Example pages/APIs
 
 * GET /tweets/?source=%23IndiaVsNZ
