@@ -35,7 +35,6 @@ Visit: <http://127.0.0.1:8000>
 
 ## TODO
 
-* your version control history, with hopefully more than 1 commit
 * project structure
 * project architecture
 * good coding practices
