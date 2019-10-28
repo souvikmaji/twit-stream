@@ -1,20 +1,29 @@
-var express = require("express");
-var router = express.Router();
+module.exports = function (io, twit) {
+	var app = require("express");
+	var router = app.Router();
 
-/* GET users listing. */
-router.get("/", function(req, res, next) {
-	const twit = req.app.get("twit");
-	
-	const source = req.query.source;
+	io.on("connection", function (socket) {
+		console.log("A user connected");
+		
+		socket.on("subscribe", function (source) {
+			console.log("message: " + source);
+			var stream = twit.stream("statuses/filter", { track: [source] });
+			console.log("came here");
+			stream.on("tweet", function (tweet) {
+				io.emit("tweet",tweet);
+			});	
+			
+		});
 
-	var stream = twit.stream("statuses/filter", { track: [source] });
+		socket.on("disconnect", function () {
+			console.log("user disconnected");
+		});
 
-	stream.on("tweet", function (tweet) {
-		console.log(tweet);
 	});
+
+	return router;
+};
+
+const sendTweets = function (source, twit, res) {
 	
-
-	res.send("respond with a resource");
-});
-
-module.exports = router;
+};
