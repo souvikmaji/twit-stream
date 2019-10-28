@@ -45,7 +45,9 @@ Visit: <http://127.0.0.1:8000>
 * Socket.io
 * twit
 
-For server to client communication, I initially tried Server Side events, with the topic being sent in a http get get request. But then I came across socket.io library. It uses a simple API for bi directional communication between server to client. 
+For server to client communication, I initially tried Server Side events, with the topic being sent in a http get get request. But then I came across socket.io library. It uses a simple API for bi directional communication between server to client.
+
+Configurations are fetched from the environment variables using `dotenv` npm package. Storing configuration in the environment separate from code is based on The [Twelve-Factor App methodology](https://12factor.net/config).
 
 ## TODO
 
