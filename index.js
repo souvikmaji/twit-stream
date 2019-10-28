@@ -7,6 +7,7 @@ var bodyParser = require("body-parser");
 var socket_io = require("socket.io");
 const Twit = require("twit");
 
+// setup dotenv: read from environment variables or from .env file
 require("dotenv").config();
 
 const config = require("./config");

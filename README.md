@@ -44,6 +44,11 @@ Visit: <http://127.0.0.1:8000>
 * ExpressJS
 * Socket.io
 * twit
+* dotenv
+
+ExpressJS is used as a static file server. It serves our html pages and static assets.
+
+Once a user has submitted a topic he want stream, server pushes new tweets to the client.
 
 For server to client communication, I initially tried Server Side events, with the topic being sent in a http get get request. But then I came across socket.io library. It uses a simple API for bi directional communication between server to client.
 
