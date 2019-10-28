@@ -12,10 +12,10 @@ Enduser should be able to view tweet in realtime.
 * Export them as environment variables or save them in a `.env` file in the project root. *(Omit the export keyword if .env file is used)*.
 
 ```sh
-export CONSUMER_KEY=ke0eqhjPudOSdzqFdaeCXAIdC
-export CONSUMER_SECRET=VHWDWkwxIJFjBU870IxqUcNQCVa38bJZNIxFKX4baQHAUi5lmg
-export ACCESS_TOKEN=891672990026301440-9OVH61NxcJc2fWVEU3O90dCCpI86Gsb
-export ACCESS_TOKEN_SECRET=r50ih0PYleRpiQHYkHIsZEYFtFQx6I1R3kww8s2nPyQG5
+export CONSUMER_KEY=<consumer_key>
+export CONSUMER_SECRET=<consuer_secret>
+export ACCESS_TOKEN=<access_token>
+export ACCESS_TOKEN_SECRET=<access_token_secret>
 ```
 
 ## Run instruction
@@ -42,6 +42,10 @@ Visit: <http://127.0.0.1:8000>
 ## Techonologies Used
 
 * ExpressJS
+* Socket.io
+* twit
+
+For server to client communication, I initially tried Server Side events, with the topic being sent in a http get get request. But then I came across socket.io library. It uses a simple API for bi directional communication between server to client. 
 
 ## TODO
 
