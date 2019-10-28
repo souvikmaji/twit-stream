@@ -45,6 +45,7 @@ Visit: <http://127.0.0.1:8000>
 * Socket.io
 * twit
 * dotenv
+* eslint
 
 ExpressJS is used as a static file server. It serves our html pages and static assets.
 
@@ -54,14 +55,12 @@ For server to client communication, I initially tried Server Side events, with t
 
 Configurations are fetched from the environment variables using `dotenv` npm package. Storing configuration in the environment separate from code is based on The [Twelve-Factor App methodology](https://12factor.net/config).
 
+Eslint is used to lint JavaScript files.
+
 ## TODO
 
 * project structure
 * project architecture
 * good coding practices
-* consistent coding style and formatting
-* namings and naming conventions
 * good use of comments
-* lint warnings
 * unit & integration tests
-* Check with <https://www.npmjs.com/package/dependency-check> before delivery.
