@@ -7,17 +7,17 @@ module.exports = function (io, twit) {
 		
 		socket.on("subscribe", function (source) {
 			console.log("message: " + source);
-			var stream = twit.stream("statuses/filter", { track: [source] });
+			let stream = twit.stream("statuses/filter", { track: [source] });
 			console.log("came here");
 			stream.on("tweet", function (tweet) {
 				io.emit("tweet",tweet);
 			});	
-			
+			socket.on("disconnect", function () {
+				stream.stop();
+			});
 		});
 
-		socket.on("disconnect", function () {
-			console.log("user disconnected");
-		});
+		
 
 	});
 
