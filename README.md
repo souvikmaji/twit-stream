@@ -1,5 +1,7 @@
 # twit-stream
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/deb85e8f8e6c45929d53a7a96c18621f)](https://www.codacy.com/manual/souvikmaji/twit-stream?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=souvikmaji/twit-stream&amp;utm_campaign=Badge_Grade)
+
 A Web application with ability to stream tweets for a given hashtag or a specific twitter account.
 
 Enduser should be able to view tweet in realtime.
