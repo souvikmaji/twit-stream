@@ -36,7 +36,7 @@ npm i
 npm start
 ```
 
-Visit: <http://127.0.0.1:8000>
+Visit: <http://127.0.0.1:3000>
 
 The project is also live and hosted at <https://byju-twit-stream.herokuapp.com/>
 
