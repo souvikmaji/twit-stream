@@ -8,7 +8,11 @@ module.exports = function (io, twit) {
 			let stream = twit.stream("statuses/filter", { track: [source] });
 
 			stream.on("tweet", function (tweet) {
-				io.emit("tweet",tweet);
+				socket.emit("tweet",tweet);
+			});
+
+			socket.on("stopStream", function () {
+				stream.stop();
 			});
 
 			socket.on("disconnect", function () {

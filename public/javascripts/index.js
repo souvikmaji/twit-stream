@@ -18,12 +18,24 @@ $(document).ready(function () {
        <br />`;
 	};
 
-	var socket = io();
+	let socket = io();
+	let oldSource = null;
 
 	$("#source-form").submit(function (event) {
-		event.preventDefault();
-		$("#feed").empty();
-		socket.emit("subscribe", $("#source").val());
+		event.preventDefault();	// prevent form submit
+
+		$("#feed").empty(); 	// clear existing feed if any
+		if(oldSource) {
+			// stop old previous stream
+			socket.emit("stopStream", oldSource);
+		}
+
+		// create new stream
+		let newSource = $("#source").val();
+		socket.emit("subscribe", newSource);
+
+		// keep track of the current source, so that it can be cleared later
+		oldSource = newSource;
 		return false;
 	});
 
