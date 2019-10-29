@@ -1,4 +1,6 @@
 $(document).ready(function () {
+	// initialize scrollTop plugin
+	$("body").materialScrollTop();
 
 	const newCard = function (tweet) {
 		return	`<div class="card card-md w-75 mx-auto mb-2">
