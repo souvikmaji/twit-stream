@@ -28,7 +28,6 @@ $(document).ready(function () {
 	});
 
 	socket.on("tweet", function (tweet) {
-		console.log(tweet);
 		let cardContent =  newCard(tweet);
 
 		$("#feed").prepend(cardContent);
