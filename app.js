@@ -15,7 +15,8 @@ const config = require("./config");
 var app = express();
 
 const twit = new Twit(config);
-// app.set("twit", twit);
+
+app.disable("x-powered-by"); // disable the X-Powered-By header
 
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 app.use(logger("dev"));
