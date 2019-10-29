@@ -34,6 +34,8 @@ npm start
 
 Visit: <http://127.0.0.1:8000>
 
+The project is also live and hosted at <https://byju-twit-stream.herokuapp.com/>
+
 ## Example pages/APIs
 
 * GET /tweets/?source=%23IndiaVsNZ
@@ -59,8 +61,4 @@ Eslint is used to lint JavaScript files.
 
 ## TODO
 
-* project structure
-* project architecture
-* good coding practices
-* good use of comments
 * unit & integration tests
