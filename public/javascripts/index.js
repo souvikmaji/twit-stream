@@ -5,6 +5,7 @@ $(document).ready(function () {
 	const newCard = function (tweet) {
 		return	`<div class="card card-md w-75 mx-auto mb-2">
           <div class="card-header bg-transparent">
+						<img src="${tweet.user.profile_image_url_https}" class="img-responsive rounded-circle float-left mr-2">
             <h5 class="card-title text-primary">${tweet.user.name}</h5>
             <h6 class="card-subtitle mb-2 text-muted">@${tweet.user.screen_name}</h6>
           </div>
@@ -12,7 +13,7 @@ $(document).ready(function () {
             <div class="card-text">${tweet.text}</div>
           </div>
           <div class="card-footer text-muted bg-transparent">
-            <span class="tab-space text-danger"><i class="fas fa-heart"></i>${tweet.favorite_count}</span>
+            <span class="tab-space text-danger"><i class="far fa-heart"></i>${tweet.favorite_count}</span>
             <span class="tab-space text-success"><i class="fas fa-retweet"></i>${tweet.retweet_count}</span>
             <span class="tab-space text-info">${tweet.created_at}</span>
           </div>
