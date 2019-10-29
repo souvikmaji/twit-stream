@@ -1,11 +1,11 @@
 module.exports = function (io, twit) {
-	var app = require("express");
-	var router = app.Router();
+	const app = require("express");
+	const router = app.Router();
 
 	io.on("connection", function (socket) {
 
 		socket.on("subscribe", function (source) {
-			let stream = twit.stream("statuses/filter", { track: [source] });
+			const stream = twit.stream("statuses/filter", { track: [source] });
 
 			stream.on("tweet", function (tweet) {
 				socket.emit("tweet",tweet);
