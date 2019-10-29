@@ -10,9 +10,9 @@ $(document).ready(function () {
           <div class="card-text">${tweet.text}</div>
         </div>
         <div class="card-footer text-muted bg-transparent">
-          <span><i class="far fa-heart"></i>${tweet.favorite_count}</span>
-          <span><i class="fas fa-retweet"></i>${tweet.retweet_count}</span>
-          <span>${tweet.created_at} </span>
+          <span class="tab-space"><i class="far fa-heart"></i>${tweet.favorite_count}</span>
+          <span class="tab-space"><i class="fas fa-retweet"></i>${tweet.retweet_count}</span>
+          <span class="tab-space">${tweet.created_at}</span>
         </div>
       </div>
        <br />`;
