@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
 	// set locals, only providing error in development
 	res.locals.message = err.message;
 	res.locals.error = req.app.get("env") === "development" ? err : {};
@@ -45,6 +45,6 @@ app.use(function (err, req, res, next) {
 var io = socket_io();
 app.io = io;
 
-var tweets = require("./routes/tweets")(io, twit);
+require("./routes/tweets")(io, twit);
 
 module.exports = app;
