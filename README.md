@@ -1,5 +1,6 @@
 # twit-stream
 
+![Travis (.com)](https://img.shields.io/travis/com/souvikmaji/twit-stream)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/deb85e8f8e6c45929d53a7a96c18621f)](https://www.codacy.com/manual/souvikmaji/twit-stream?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=souvikmaji/twit-stream&amp;utm_campaign=Badge_Grade)
 ![David](https://img.shields.io/david/souvikmaji/twit-stream)
 ![GitHub](https://img.shields.io/github/license/souvikmaji/twit-stream)
