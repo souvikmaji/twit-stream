@@ -16,6 +16,21 @@ describe("Tweet Stream", () => {
 				.end((err, res) => {
 					expect(err).to.be.null;
 					expect(res).to.have.status(200);
+					expect(res).not.to.have.header("x-powered-by");
+					expect(res).to.be.html;
+					done();
+				});
+		});
+	});
+
+	describe("Any other route", () => {
+		it("it should return 404", (done) => {
+			chai.request(app)
+				.get("/source")
+				.end((err, res) => {
+					expect(err).to.be.null;
+					expect(res).to.have.status(404);
+					expect(res).not.to.have.header("x-powered-by");
 					expect(res).to.be.html;
 					done();
 				});
