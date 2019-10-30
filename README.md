@@ -7,7 +7,7 @@
 
 A Web application with the ability to stream tweets for a given hashtag or a specific twitter account.
 
-Enduser should be able to view tweet in realtime.
+Enduser can view tweets in realtime.
 
 ## Prerequisites
 

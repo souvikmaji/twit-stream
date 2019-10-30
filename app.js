@@ -4,6 +4,7 @@ const favicon = require("serve-favicon");
 const logger = require("morgan");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
+const http = require("http");
 const socket_io = require("socket.io");
 const Twit = require("twit");
 
@@ -43,9 +44,15 @@ app.use(function (err, req, res) {
 	res.send("error");
 });
 
+
+// Create HTTP server using app
+const server = http.Server(app);
+
+// bind server with socker.io
 const io = socket_io();
-app.io = io;
+io.attach(server);
 
 require("./routes/tweets")(io, twit);
 
-module.exports = app;
+// export both app and server to be used by www
+module.exports = {app: app, server: server};
