@@ -35,6 +35,9 @@ npm i
 
 # run
 npm start
+
+# run integration tests
+npm test
 ```
 
 Visit: <http://127.0.0.1:3000>
