@@ -3,7 +3,7 @@ $(document).ready(function () {
 	$("body").materialScrollTop();
 
 	const newCard = function (tweet) {
-		return	`<div class="card card-md w-75 mx-auto mb-2">
+		return	`<div class="card card-md w-75 mx-auto mb-2" style="display: none;">
           <div class="card-header bg-transparent">
 						<img src="${tweet.user.profile_image_url_https}" class="img-responsive rounded-circle float-left mr-2">
 						<a href="https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}" target="_blank" title="Show on Twitter"><i class="fab fa-twitter float-right"></i></a>
@@ -30,7 +30,7 @@ $(document).ready(function () {
 
 		$("#feed").empty(); 	// clear existing feed if any
 		if(oldSource) {
-			// stop old previous stream
+			// stop previous stream
 			socket.emit("stopStream", oldSource);
 		}
 
@@ -45,8 +45,7 @@ $(document).ready(function () {
 
 	socket.on("tweet", function (tweet) {
 		let cardContent =  newCard(tweet);
-
-		$("#feed").prepend(cardContent);
+		$(cardContent).prependTo("#feed").show("slow");//.show("slow");
 	});
 
 });
